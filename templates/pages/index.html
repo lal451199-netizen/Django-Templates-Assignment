@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            padding: 40px;
+        }
+        .container {
+            background-color: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #ccc;
+        }
+        h1 {
+            color: #235789;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information</h1>
+
+        <p><b>First Name:</b>
+            {{ first_name|capfirst }}
+        </p>
+
+        <p><b>Full Name:</b>
+            {{ first_name|add:" "|add:last_name }}
+        </p>
+
+        <p><b>Student ID:</b>
+            {{ student_id|stringformat:"s" }}
+        </p>
+
+        <p><b>Address:</b>
+            {{ address|upper }}
+        </p>
+
+        <p><b>Email:</b>
+            {{ email|default:"No email provided" }}
+        </p>
+
+        <p><b>Time Since Birth:</b>
+            {{ date_of_birth|timesince }}
+        </p>
+    </div>
+</body>
+</html>
