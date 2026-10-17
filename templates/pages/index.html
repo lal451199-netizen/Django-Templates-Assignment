@@ -37,7 +37,7 @@
         </p>
 
         <p><b>Full Name:</b>
-            {{ first_name|add:" "|add:last_name }}
+            {{ first_name|add:" "|add:last_name|lower|capfirst }}
         </p>
 
         <p><b>Student ID:</b>
